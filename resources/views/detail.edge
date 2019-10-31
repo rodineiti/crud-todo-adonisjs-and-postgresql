@@ -1,0 +1,12 @@
+@layout('main')
+@section('content')
+<h1>Details</h1>
+<div class="jumbotron">
+<h1 class="display-4">{{task.title}}</h1>
+<p class="lead">{{task.body}}</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="/tasks" role="button">Back</a>
+  <a class="btn btn-danger btn-lg" href="/destroy/{{task.id}}" role="button">Delete</a>
+  <a class="btn btn-info btn-lg" href="/edit/{{task.id}}" role="button">Edit</a>
+</div>
+@endsection

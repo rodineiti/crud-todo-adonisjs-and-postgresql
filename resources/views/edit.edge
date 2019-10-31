@@ -1,0 +1,22 @@
+@layout('main')
+@section('content')
+<h1 class="mb-3">Edit Task</h1>
+<form action="{{route('update', { id: task.id })}}" method="POST">
+  {{csrfField()}}
+  <div class="mb-3">
+    <label for="">Title</label>
+    <input type="text" name="title" id="title"
+        class="form-control {{ hasErrorFor('title') ? 'is-invalid' : ''}}"
+  placeholder="Your title" value="{{task.title}}" />
+    {{ elIf('<div class="invalid-feedback">$self</div>', getErrorFor('title'), hasErrorFor('title')) }}
+  </div>
+  <div class="mb-3">
+    <label for="">Body</label>
+    <textarea name="body" id="body"
+        class="form-control {{ hasErrorFor('body') ? 'is-invalid' : ''}}"
+        placeholder="Your body">{{task.body}}</textarea>
+        {{ elIf('<div class="invalid-feedback">$self</div>', getErrorFor('body'), hasErrorFor('body')) }}
+  </div>
+  <button class="btn btn-primary" type="submit">Save Task</button>
+</form>
+@endsection
