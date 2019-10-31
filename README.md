@@ -1,3 +1,7 @@
+# crud-todo-adonisjs-and-postgresql
+
+Simple Crud Application with AdonisJs and Postgresql
+
 # Adonis fullstack application
 
 This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
@@ -21,7 +25,6 @@ adonis new yardstick
 
 or manually clone the repo and then run `npm install`.
 
-
 ### Migrations
 
 Run the following command to run startup migrations.
@@ -29,4 +32,3 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
-# crud-todo-adonisjs-and-postgresql
